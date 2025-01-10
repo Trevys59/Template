@@ -1,0 +1,527 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --light-color: #fff;
+}
+
+/* Animation des liens */
+a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Animation des boutons */
+button, .btn-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Animation des sections au défilement */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Styles du header */
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: sticky;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+    position: sticky;
+}
+
+/* Fond des sections */
+#about {
+    background: var(--light-color);
+}
+
+#skills {
+    background: var(--background-color);
+}
+
+#projects {
+    background: linear-gradient(135deg, var(--primary-color) 30%, var(--secondary-color) 90%);
+    color: var(--light-color);
+}
+
+#contact {
+    background: var(--light-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/***********************************************************************************************************************************************************************************/
+/*** section À propos **************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+#about {
+    background-color: #fff;
+    padding: 50px 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Titre principal */
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Texte général et paragraphes */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Photo de profil */
+#about img {
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Icônes des centres d'intérêt */
+#about .material-symbols-outlined {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Boutons et liens */
+#about a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
+
+#about .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#about .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Bloc "Parcours scolaire" */
+#about aside {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cartes "Parcours scolaire" */
+#about aside .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+#about aside .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Statistiques ou faits marquants */
+#about .row h3 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#about .row p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about {
+        padding: 30px 20px;
+    }
+
+    #about aside {
+        margin-top: 20px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about .material-symbols-outlined {
+        font-size: 2.5rem;
+    }
+}
+
+/***********************************************************************************************************************************************************************************/
+/*** section Compétences ***********************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+#skills {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#skills .card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#skills .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#skills .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+#skills .card-title {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#skills ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#skills .material-symbols-outlined {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/***********************************************************************************************************************************************************************************/
+/*** section Projets ***************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+#projects {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#projects .card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#projects .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card-img-top {
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    height: 200px;
+}
+
+#projects .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+#projects .card-title {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#projects .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+#projects .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#projects .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/***********************************************************************************************************************************************************************************/
+/*** section Contact ***************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+/* section Contact */
+#contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#contact a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+#contact .material-symbols-outlined {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+#contact .material-symbols-outlined:hover {
+    color: #0056b3;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#contact .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+/***********************************************************************************************************************************************************************************/
+/*** Styles du footer **************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+footer {
+    background-color: #333;
+    color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .footer-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+footer .social-links a {
+    color: #f8f9fa;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #007bff;
+}
+
+footer .fab, footer .fas {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .fab:hover, footer .fas:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+/***********************************************************************************************************************************************************************************/
+/*** Autres ************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************/
+#BLC{
+    background-image: url('../images/blc/FondBasic.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    padding: 50px 0; 
+}
+
+#project-BLC{
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+}
+
+.white-text {
+    color: white;
+}
+
+.material-symbols-outlined{
+    margin-top: 75px;
+    margin-left: 69px;
+    margin-right: 69px;
+    font-size: 3em !important;
+    box-shadow: 1px 5px 5px rgba(107, 107, 107, 0.842);
+}
+
+/*NEW****************************************************************************************************************/
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    #about h2, #skills h2, #projects h2, #contact h2 {
+        font-size: 1.8rem;
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#back-to-top.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #007bff;
+}
