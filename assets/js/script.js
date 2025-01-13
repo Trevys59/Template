@@ -18,57 +18,6 @@ function initSmoothScroll() {
     });
 }
 
-// Fonction pour gérer le formulaire de contact
-function initContactForm() {
-    const contactForm = document.getElementById("contact-form");
-
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche l'envoi du formulaire
-
-        // Récupération des valeurs du formulaire
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // Validation des champs
-        if (!validateContactForm(name, email, message)) {
-            alert("Veuillez remplir tous les champs correctement.");
-            return;
-        }
-
-        // Intégration ou action lors de la soumission du formulaire
-        sendContactEmail(name, email, message);
-    });
-}
-
-// Validation du formulaire de contact
-function validateContactForm(name, email, message) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple validation d'email
-
-    if (!name || !email || !message) {
-        return false; // Un champ est vide
-    }
-
-    if (!emailRegex.test(email)) {
-        alert("Veuillez entrer une adresse e-mail valide.");
-        return false; // Email invalide
-    }
-
-    return true; // Formulaire valide
-}
-
-// Envoi d'un e-mail via mailto
-function sendContactEmail(name, email, message) {
-    const mailtoLink = `mailto:trevys.sarrazyn@gmail.com?subject=Contact Form Submission&body=Nom: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
-
-    // Ouvrir le client de messagerie
-    window.location.href = mailtoLink;
-
-    // Réinitialise le formulaire après l'envoi
-    document.getElementById("contact-form").reset();
-
-    alert("Merci pour votre message, je vous contacterai bientôt !");
-}
 
 // Fonction pour gérer les animations au défilement
 function initScrollAnimations() {
