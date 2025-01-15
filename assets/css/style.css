@@ -2,14 +2,14 @@
 /* Variables globales                                                         */
 /* =========================================================================== */
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #0056b3;
-  --background-color: #f4f4f4;
-  --text-color: #333;
-  --grey-color: #555;
-  --light-color: #fff;
-  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-dark: 0 6px 12px rgba(0, 0, 0, 0.2);
+  --primary-color: #007bff; /* Couleur principale du thème */
+  --secondary-color: #0056b3; /* Couleur secondaire pour les accents */
+  --background-color: #f4f4f4; /* Couleur de fond de la page */
+  --text-color: #333; /* Couleur principale du texte */
+  --grey-color: #555; /* Couleur grise pour le texte secondaire */
+  --light-color: #fff; /* Couleur blanche utilisée dans les sections */
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour les éléments */
+  --shadow-dark: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
 }
 
 /* =========================================================================== */
@@ -18,11 +18,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Assure que le padding ne dépasse pas la largeur/hauteur */
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Police générale de la page */
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.6;
@@ -34,7 +34,7 @@ body {
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transition douce sur le hover */
 }
 
 a:hover {
@@ -45,31 +45,31 @@ a:hover {
 button, .btn-primary {
   transition: background-color 0.3s ease, transform 0.2s ease;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 5px; /* Arrondi des boutons */
   font-size: 1rem;
 }
 
 button:hover, .btn-primary:hover {
   background-color: var(--secondary-color);
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Effet de soulèvement */
 }
 
 /* =========================================================================== */
 /* Sections générales                                                         */
 /* =========================================================================== */
 section {
-  padding: 50px 0;
-  text-align: center;
+  padding: 50px 0; /* Espacement vertical des sections */
+  text-align: center; /* Centrer le contenu */
 }
 
 section h2 {
   margin-bottom: 30px;
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Taille du titre des sections */
   color: var(--primary-color);
 }
 
-i{
-  color: skyblue;
+i {
+  color: skyblue; /* Couleur par défaut pour les icônes */
 }
 
 /* =========================================================================== */
@@ -79,12 +79,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: #333;
+  background-color: #333; /* Couleur sombre pour le header */
 }
 
 .navbar-nav .nav-link {
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Transition douce sur le hover */
 }
 
 .navbar-nav .nav-link:hover {
@@ -95,9 +95,9 @@ header {
 /* Images                                                                     */
 /* =========================================================================== */
 img {
-  border-radius: 8px;
+  border-radius: 8px; /* Coins arrondis des images */
   box-shadow: var(--shadow-light);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Zoom sur hover */
 }
 
 img:hover {
@@ -123,7 +123,7 @@ img:hover {
 #about img {
   margin-bottom: 20px;
   border: 3px solid var(--primary-color);
-  border-radius: 50%;
+  border-radius: 50%; /* Forme circulaire pour les photos de profil */
   box-shadow: var(--shadow-light);
 }
 
@@ -150,7 +150,7 @@ img:hover {
   color: var(--light-color);
 }
 
-#projects h2{
+#projects h2 {
   color: var(--light-color);
 }
 
@@ -181,7 +181,7 @@ img:hover {
 /* Section "Contact" */
 #contact {
   background-color: var(--light-color);
-  bottom: 10 px;
+  padding: 50px 0;
 }
 
 #contact .form-group label {
@@ -217,7 +217,7 @@ footer a:hover {
 /* =========================================================================== */
 @media (max-width: 768px) {
   h2 {
-      font-size: 2rem;
+      font-size: 2rem; /* Réduction de la taille des titres sur petits écrans */
   }
 
   nav.navbar {
@@ -225,6 +225,6 @@ footer a:hover {
   }
 
   section {
-      padding: 30px 10px;
+      padding: 30px 10px; /* Réduction des marges internes */
   }
 }
