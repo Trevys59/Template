@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Initialisation des fonctionnalités après le chargement de la page
     initSmoothScroll();
-    initBackToTopButton();
-    initContactForm();
     initScrollAnimations();
 });
 
